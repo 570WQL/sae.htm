@@ -1,0 +1,168 @@
+<html>
+<head>
+    <title>SAE.HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+<body>
+<style>
+body{
+    margin:0;
+    padding:0;
+}
+*{
+    font-size:30px;
+}
+*::selection{
+    text-shadow:0px 0px 5px;
+}
+input[type=checkbox],
+input[type=radio]{
+    position:relative;
+    height:30px;
+    width:30px;
+    margin:0;
+    padding:0;
+}
+input[type=checkbox]:before,
+input[type=radio]:before{
+    position:absolute;
+    content:" ";
+    top:-2px;
+    left:-2px;
+    background:white;
+    border:2px solid black;
+    border-radius:20%;
+    height:100%;
+    width:100%;
+}
+input[type=radio]:before{
+    border-radius:100%;
+}
+input[type=checkbox]:after{
+    position:absolute;
+    content:" ";
+    height:100%;
+    transition:width 0.2s;
+    width:0%;
+    background-image:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0,0,30,30"><path d="M5,15 15,25 25,5" fill="none" stroke="black" stroke-width="2px"></path></svg>');
+}
+input[type=checkbox]:checked:after{
+    width:100%;
+}
+input[type=radio]:after{
+    position:absolute;
+    content:" ";
+    transition:left 0.2s,top 0.2s,height 0.2s,width 0.2s;
+    height:0%;
+    width:0%;
+    top:50%;
+    left:50%;
+    background-color:black;
+    border-radius:100%;
+}
+input[type=radio]:checked:after{
+    height:50%;
+    width:50%;
+    top:25%;
+    left:25%;
+}
+.line{
+    border:1px black solid;
+}
+#mmenub{
+    position:fixed;
+    left:10px;
+    top:10px;
+    height:0;
+    width:0;
+    z-index:10000;
+}
+#mmenub:before{
+    position:absolute;
+    height:100px;
+    width:100px;
+    border:2px solid black;
+    border-radius:100%;
+}
+#mmenub:after{
+    display:none;
+}
+.bg{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border:2px solid black;
+    border-radius:5px;
+    background-color:white;
+    z-index:-10;
+}
+#mmenu{
+    position:absolute;
+    top:120px;
+    left:10px;
+    margin:0;
+    padding:0;
+    min-width:200px;
+    transition:height 0.2s;
+    height:0px;
+    z-index:10000;
+    overflow:hidden;
+}
+#mmenub:checked+#mmenu{
+    height:100px;
+}
+.content{
+    position:fixed;
+    /*background-color:yellow;*/
+    margin:0;
+    padding:0;
+    left:0;
+    top:120px;
+    bottom:0px;
+    width:100%;
+    overflow:scroll;
+    display:none;
+    z-index:-10000;
+}
+#mmenu>li>input:checked+.content{
+    display:block;
+}
+</style>
+<input type="checkbox" id="mmenub"></input>
+<ul id="mmenu">
+<li>
+    <span class="bg"></span>
+<input type="radio" name="mmenu">h</input>
+<span class="content">
+    <input type="checkbox"></input>
+    <input type="checkbox"></input>
+    <br/>
+    <div class="line"></div>
+    <input type="radio" name="abbre"></input>
+    <input type="radio" name="abbre"></input>
+    <input type="radio" name="abbre"></input>
+    <input type="radio" name="abbre"></input>
+</span>
+</li>
+<li>
+<input type="radio" name="mmenu">fw</input>
+<span class="content">
+    这类可以参考官网的New Scratcher设定。如果用户低于一定等级并不是"什么都做不了"，应该是"可以做一些事情证明自己是一个正常账号"(例如发布有意义的作品，参与活动，友善交流，有意义再创作，完成新手任务，坚持打卡获得谜题)，在成为正常账号之前会获得限制(例如一天只能发送10评论，作品发布需要审核，能量条恢复极慢，点赞不能获得金币(包括<input type="radio"></input>点赞者/被点赞者)检测到敏感词或者连续发送/短理由举报行为自动大量扣除能量条甚至禁言，禁止挖矿/关注/打赏/……)准确识别是很困难的事情。另外，如果是真正的scratch爱好者和创作者，获得二级真人认证并不困难。这个问题有复杂的历史现实原因，不是表面上看那么简单。如果不是因为暂时没有更好的解决方案，不会添加这些限制。老师会一直关注大家的建议和情况的变化，尽可能协调好相关资源矛盾。下卷页
+    
+    > 准确识别是很困难的事情。另外，如果是真正的scratch爱好者和创作者，获得二级真人认证并不困难。
+    
+    > 这个问题有复杂的历史现实原因，不是表面上看那么简单。如果不是因为暂时没有更好的解决方案，不会添加这些限制。老师会一直关注大家的建议和情况的变化，尽可能协调好相关资源矛盾。
+    
+    ---
+    
+    现在关注/粉丝/工作室列表缩了一半，事实证明，B站这个视频网站基本不存在过度低龄化，刷小号去骂人的情况，整个社区很和谐，因为他有一个“等级”系统，升级你的等级需要很长的时间，并且“转正”需要答很多题，这样的话，你想开小号骂人，需要很长时间才能培养出一个能够评论的小号。[这是内容](这是链接)
+</span>
+</li>
+</ul>
+<div class="line"></div>
+
+
+</body>
+</html>
